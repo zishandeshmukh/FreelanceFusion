@@ -152,3 +152,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.fade-in, .team-card, .project-card');
     animatedElements.forEach(el => observer.observe(el));
 });
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("La7qMhUgyYpnDiL8Z");
+});
+
+document.querySelector(".contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent page reload
+
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_62cvv0s", "template_bu5va5u", formData)
+        .then(() => {
+            alert("Email sent successfully!");
+            document.querySelector(".contact-form").reset(); // Reset form after submission
+        })
+        .catch((error) => {
+            alert("Failed to send email: " + JSON.stringify(error));
+        });
+});

@@ -705,7 +705,179 @@
                 grid-template-columns: 1fr;
             }
         }
+.param{
+    height: 275px;
+}
+        /* footer */
+
+        footer {
+    padding: 3rem 0 1.5rem;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid #706f6f;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+/* Brand Section */
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-brand h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Navigation */
+.footer-nav {
+    flex: 2;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.footer-nav a:hover {
+    color: #0070f3;
+}
+
+.footer-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #0070f3;
+    transition: width 0.2s;
+}
+
+.footer-nav a:hover::after {
+    width: 100%;
+}
+
+/* Social Icons */
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: #333;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    border: 1px solid #eaeaea;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+.social-icon:nth-child(1):hover {
+    background-color: #0077b5; /* LinkedIn */
+    border-color: #0077b5;
+}
+
+.social-icon:nth-child(2):hover {
+    background-color: #333; /* GitHub */
+    border-color: #333;
+}
+
+.social-icon:nth-child(3):hover {
+    background-color: #1da1f2; /* Twitter */
+    border-color: #1da1f2;
+}
+
+.social-icon:nth-child(4):hover {
+    background-color: #e1306c; /* Instagram */
+    border-color: #e1306c;
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-nav ul {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .footer-social {
+        margin-top: 1rem;
+    }
+}
+.custom-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits text color */
+}
+
+/* Optional: If needed, ensure no blue color appears on hover */
+.custom-link:visited,
+.custom-link:hover,
+.custom-link:focus {
+    color: inherit;
+}
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
 </head>
 <body>
     <header>
@@ -721,9 +893,9 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger-btn">
+            <!-- <button class="hamburger" id="hamburger-btn">
                 <i class="fas fa-bars"></i>
-            </button>
+            </button> -->
         </nav>
     </header>
 
@@ -732,8 +904,13 @@
             <h1>Innovate. Build. Elevate.</h1>
             <p>Transform your vision into reality with 404_ERROR's innovative solutions. We specialize in cutting-edge web development, AI integration, and blockchain technology.</p>
             <div class="hero-cta">
-                <button class="btn btn-primary">Start Your Project</button>
-                <button class="btn btn-secondary">View Our Work</button>
+                <a href="#contact" class="custom-link">
+                    <button class="btn btn-primary">Start Your Project</button>
+                </a>
+                <a href="#projects" class="custom-link">
+                    <button class="btn btn-secondary">View Our Work</button>
+                </a>
+               
             </div>
         </div>
     </section>
@@ -745,49 +922,48 @@
         <div class="team-grid">
             <div class="team-card fade-in">
                 <div class="team-image">
-                    <img src="static/images/zishan.png" alt="Zishan Deshmukh">
+                    <img src="/static/images/zishan.png" alt="Zishan Deshmukh">
                 </div>
                 <div class="team-info">
                     <h3 class="team-name">Zishan Deshmukh</h3>
                     <p class="team-role">CEO & Founder</p>
                     <p class="team-bio">Expert in AI, and full-stack development with a passion for creating innovative solutions.</p>
                     <div class="team-social">
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/zishan-deshmukh-51236728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/zishandeshmukh" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/ZishanDesh68630?t=owMJX2SYunuHywVWbFFnVg&s=09" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/deshmukh_zishan786?igsh=MTlvOW4weDV3Y2ZwaQ==" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="team-card fade-in">
                 <div class="team-image">
-                    <img src="static/images/vinay.png" alt="Vinay Wagh">
+                    <img src="/static/images/vinay.png" alt="Vinay Titarmare">
                 </div>
                 <div class="team-info">
                     <h3 class="team-name">Vinay Titarmare</h3>
                     <p class="team-role">CFO</p>
                     <p class="team-bio">Full stack developer expertise in risk management and business growth planning.</p>
                     <div class="team-social">
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/vinay-titarmare-56a4b72ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Vinaytitarmare" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/_vnay.titarmare?igsh=eWgyOW9yd2JrODVr" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="team-card fade-in">
                 <div class="team-image">
-                    <img src="static/images/sahil1.png" alt="Sahil Shikalgar">
+                    <img src="/static/images/sahil1.png" alt="Sahil Shikalgar">
                 </div>
                 <div class="team-info">
                     <h3 class="team-name">Sahil Shikalgar</h3>
                     <p class="team-role">CFO & Marketing Head</p>
                     <p class="team-bio">Marketing strategist focused on brand building and sustainable growth through innovative campaigns.</p>
                     <div class="team-social">
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="http://wa.me/9049017096" class="social-icon" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    
                     </div>
                 </div>
             </div>
@@ -801,14 +977,14 @@
         <div class="projects-grid">
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <img src="static/images/1.png" alt="AI Analytics Platform">
+                    <img src="/static/images/1.png" alt="AI Analytics Platform">
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Docmatrix</h3>
                     <p class="project-category">Artificial Intelligence</p>
-                    <p class="project-description">AI-Powered PDF Manager & Analyzer 
+                    <div class="param"><p class="project-description">AI-Powered PDF Manager & Analyzer 
                         an intelligent system for seamless PDF management, featuring OCR-based scanning, deep content analysis, and NLP-driven summarization. It extracts key insights, detects patterns, and automates indexing, optimizing workflows for research, business, and legal applications.</p>
-                    <div class="project-tech">
+                    </div><div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">TensorFlow</span>
                         <span class="tech-tag">Streamlit</span>
@@ -816,7 +992,7 @@
                         <span class="tech-tag">Pandas</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="https://github.com/zishandeshmukh/pdf_manager.git" target="_blank">
+                        <a href="https://github.com/zishandeshmukh/pdf_manager.git" class="project-link github" target="_blank">
                             <i class="fab fa-github"></i> View Code
                         </a>
                         <a href="#" class="project-link live" target="_blank">
@@ -828,20 +1004,20 @@
 
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <img src="static/images/2.png" alt="Blockchain Trading Platform">
+                    <img src="/static/images/2.png" alt="Blockchain Trading Platform">
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Surveillance Camera System</h3>
-                    <p class="project-category">Surveillence Camera System</p>
-                    <p class="project-description">An AI-powered surveillance camera system that ensures real-time monitoring, threat detection, and automated alerts using computer vision and deep learning. It integrates smart analytics, facial recognition, and motion tracking to enhance security and improve response times in various environments.                        .</p>
-                    <div class="project-tech">
+                    <p class="project-category">Surveillance Camera System</p>
+                    <div class="param"><p class="project-description">An AI-powered surveillance camera system that ensures real-time monitoring, threat detection, and automated alerts using computer vision and deep learning. It integrates smart analytics, facial recognition, and motion tracking to enhance security and improve response times in various environments.                        .</p>
+                    </div><div class="project-tech">
                         <span class="tech-tag">Svelte</span>
                         <span class="tech-tag">Express.js,Node.js</span>
                         <span class="tech-tag">WebRTC</span>
                         <span class="tech-tag">FFMPEG</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="https://github.com/ptsdpatient/Apex-Live.git" target="_blank">
+                        <a href="https://github.com/ptsdpatient/Apex-Live.git" class="project-link github" target="_blank">
                             <i class="fab fa-github"></i> View Code
                         </a>
                         <a href="#" class="project-link live" target="_blank">
@@ -853,12 +1029,13 @@
 
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <img src="static/images/2.png" alt="IoT Dashboard">
+                    <img src="/static/images/2.png" alt="IoT Dashboard">
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">IoT Management Dashboard</h3>
                     <p class="project-category">Internet of Things</p>
-                    <p class="project-description">Real-time IoT device management platform with advanced analytics and reporting capabilities.</p>
+                    <div class="param"><p class="project-description">Real-time IoT device management platform with advanced analytics and reporting capabilities.</p>
+                    </div>
                     <div class="project-tech">
                         <span class="tech-tag">Vue.js</span>
                         <span class="tech-tag">Node.js</span>
@@ -920,10 +1097,11 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/zishan-deshmukh-51236728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/zishandeshmukh" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/zishandeshmukh" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/deshmukh_zishan786?igsh=MTlvOW4weDV3Y2ZwaQ==" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    
                     </div>
                 </div>
             </div>
@@ -973,8 +1151,9 @@
                 <!-- Logo Section -->
                 <div class="footer-brand">
                     <h2>404_ERROR</h2>
+                    <p class="tagline">Turning errors into solutions</p>
                 </div>
-    
+                
                 <!-- Navigation Links -->
                 <nav class="footer-nav" aria-label="Footer Navigation">
                     <ul>
@@ -984,24 +1163,17 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-    
+                
                 <!-- Social Media Links -->
                 <div class="footer-social">
-                    <a href="#" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" target="_blank" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/zishan-deshmukh-51236728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/zishandeshmukh" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/zishandeshmukh" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/deshmukh_zishan786?igsh=MTlvOW4weDV3Y2ZwaQ==" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                
                 </div>
             </div>
-    
+            
             <!-- Copyright -->
             <div class="footer-bottom">
                 <p>&copy; 2024 404_ERROR. All rights reserved.</p>
@@ -1010,7 +1182,7 @@
     </footer>
     
     <!-- JavaScript -->
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="/static/js/main.js"></script>
     </body>
     </html>
     

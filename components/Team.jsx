@@ -7,7 +7,7 @@ const teamMembers = [
     tagline: 'Crafting scalable web backends, Next.js applications & AI workflows.',
     bio: 'Software engineer with deep expertise in full-stack web development, Generative AI pipelines, and computer vision systems. Experienced in designing enterprise B2B applications and high-throughput APIs.',
     image: '/images/zishan.png',
-    imgStyle: { objectPosition: 'center 75%', transform: 'scale(1.28)', transformOrigin: 'center 75%' },
+    imgStyle: { objectPosition: 'center 15%', objectFit: 'cover' },
     skills: ['Next.js 16 / React', 'FastAPI & Python', 'GenAI / RAG', 'PostgreSQL & Docker'],
     socials: [
       { icon: 'fab fa-linkedin-in', url: 'https://www.linkedin.com/in/zishan-deshmukh-51236728a', label: 'LinkedIn' },
@@ -22,7 +22,7 @@ const teamMembers = [
     tagline: 'Driving product-market fit, client success & rapid execution.',
     bio: 'Product strategist focused on technical project management, user-centric system design, and ensuring projects launch on time and on budget with exceptional business value.',
     image: '/images/sahil1.png',
-    imgStyle: { objectPosition: 'center 20%', transform: 'scale(1.02)' },
+    imgStyle: { objectPosition: 'center 15%', objectFit: 'cover' },
     skills: ['Product Architecture', 'Agile Scrum Lead', 'Client Operations', 'UI/UX Validation'],
     socials: [
       { icon: 'fab fa-whatsapp', url: 'https://wa.me/9049017096', label: 'WhatsApp' },
